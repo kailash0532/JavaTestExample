@@ -38,6 +38,31 @@ public class ClassA {
 		aObj.test2();
 		aObj.test3();
 		
+		 
+		        long startTime = System.currentTimeMillis();  
+		        StringBuffer sb = new StringBuffer("Java");  
+		        for (int i=0; i<100000; i++){  
+		            sb.append("Tpoint");  
+		        }  
+		        System.out.println("Time taken by StringBuffer: " + (System.currentTimeMillis() - startTime) + "ms");  
+		        startTime = System.currentTimeMillis();  
+		        StringBuilder sb2 = new StringBuilder("Java");  
+		        for (int i=0; i<100000; i++){  
+		            sb2.append("Tpoint");  
+		        }  
+		        System.out.println("Time taken by StringBuilder: " + (System.currentTimeMillis() - startTime) + "ms");  
+		        
+		        String str=String.join("-", "This","is","java","class");
+		        System.out.println(str);
+		        
+		        String[] words=str.split("\\-",4);
+		       for(String word:words) {
+		    	   System.out.println(word);
+		       }
+		       
+		       System.out.println(Math.addExact(10, 20));
+		     
+		
 	}
 
 }
